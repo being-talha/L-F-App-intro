@@ -505,14 +505,21 @@
             <h3 class="mb-40 wow fadeInUp" data-wow-delay=".3s">
               Do You Have Any Question?
             </h3>
-            <form action="assets/contact.php" method="post" class="contact-form wow fadeInUp" data-wow-delay=".4s">
+            <!-- <form action="assets/contact.php" method="post" class="contact-form wow fadeInUp" data-wow-delay=".4s">
               <input type="text" placeholder="Name" name="name" id="name" required />
               <input type="email" placeholder="Email" name="email" id="email" required />
               <textarea name="message" id="message" rows="4" placeholder="Message" required></textarea>
               <button class="btn-hover btn-block main-btn" type="submit">
                 Send Message
               </button>
+            </form> -->
+            <form id="google-sheet-form">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
             </form>
+
           </div>
         </div>
       </div>
@@ -731,6 +738,31 @@
     form.reset();
   });
 </script>
+
+
+
+
+<script>
+  document.getElementById("google-sheet-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    await fetch("YOUR_GOOGLE_SCRIPT_URL", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    alert("Message sent!");
+    form.reset();
+  });
+</script>
+
 
 </body>
 

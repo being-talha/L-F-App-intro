@@ -47,7 +47,6 @@
       });
     });
   });
-
   // section menu active
   function onScroll(event) {
     const sections = document.querySelectorAll(".page-scroll");
