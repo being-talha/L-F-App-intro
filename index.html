@@ -752,7 +752,7 @@
       message: form.message.value,
     };
 
-    await fetch("YOUR_GOOGLE_SCRIPT_URL", {
+    await fetch("https://script.google.com/macros/s/AKfycbzrB1LPGgCVBuKoL-qu9wdyaUt28S4fPyOlUj7XBtN851nYFyDxVsv9JSwJpadrVBsr8Q/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
