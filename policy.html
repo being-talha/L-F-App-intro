@@ -19,7 +19,8 @@
 
   <!-- jsPDF CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <!-- PDF Button Styling -->
   <style>
     .btn-pdf {
@@ -129,17 +130,26 @@
 
 <!-- ✅ PDF Generation Script -->
 <script>
-  function downloadPDF() {
+  async function downloadPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF('p', 'pt', 'a4');
-    const content = document.getElementById("policy-content").innerText;
-    const margin = 40;
-    const maxLineWidth = 500;
-    const lines = doc.splitTextToSize(content, maxLineWidth);
-    doc.text(lines, margin, margin);
-    doc.save("Amanat-Policy.pdf");
+    const content = document.getElementById("policy-content");
+
+    const canvas = await html2canvas(content, {
+      scale: 2,
+      useCORS: true
+    });
+
+    const imgData = canvas.toDataURL('image/png');
+    const imgProps = doc.getImageProperties(imgData);
+    const pdfWidth = doc.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+    doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    doc.save('LostAndFound-Policy.pdf');
   }
 </script>
+
 
 </body>
 </html>
