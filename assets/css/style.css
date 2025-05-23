@@ -34,7 +34,7 @@ body.dark-mode {
   color: white;
 }
 
-/* Dark Mode Toggle Button */
+
 #theme-toggle {
   position: fixed;
   top: 20px;
@@ -54,6 +54,15 @@ body.dark-mode {
   transition: color 0.3s ease;
   /* Smooth transition for the icon color */
 }
+
+@media (max-width: 768px) {
+  #theme-toggle {
+    top: 70px;   /* Push it down to avoid overlapping nav icon */
+    right: 15px; /* Adjust if needed */
+    font-size: 24px; /* Slightly smaller on small screens */
+  }
+}
+
 
 /* Hover effect (optional) */
 #theme-toggle:hover {
