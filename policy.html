@@ -3,84 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Policy - Amanat</title>
+  <title>Privacy & Terms - Amanat</title>
 
-  <!-- ✅ Corrected CSS Paths -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/lineicons.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/lineicons.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- ✅ WOW.js + Animate Init -->
-  <script src="js/wow.min.js"></script>
+  <!-- WOW.js -->
+  <script src="assets/js/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>
+
+  <!-- jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- PDF Button Styling -->
+  <style>
+    .btn-pdf {
+      background-color: #dc5453;
+      color: #fff;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 40px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-pdf:hover {
+      background-color: #c63d3d;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ✅ Styled Policy Section -->
-  <section id="policy" class="pricing-area pt-120">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-6 col-lg-8 col-md-10 mx-auto">
-          <div class="section-title text-center">
-            <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Our Policies</h2>
-            <p class="mb-50 wow fadeInUp" data-wow-delay=".4s">
-              Learn more about how we protect your privacy, manage your data, and ensure a secure and respectful
-              community experience on our platform. Below you’ll find summaries of our key policies.
-            </p>
-          </div>
+<section id="policy" class="pricing-area pt-120 pb-120" style="background-color: #dcffdd;">
+  <div class="container" id="policy-content">
+    <div class="row">
+      <div class="col-xl-10 col-lg-10 mx-auto">
+        <div class="section-title text-center">
+          <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Privacy Policy for Amanat</h2>
+          <p class="mb-10 wow fadeInUp" data-wow-delay=".3s"><strong>Effective Date:</strong> 05/23/2025</p>
         </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-xl-4 col-lg-4 col-md-6">
-          <div class="single-price text-center wow fadeInUp" data-wow-delay=".3s">
-            <div class="price-icon icon-style mx-auto gradient-1">
-              <i class="lni lni-lock"></i>
-            </div>
-            <h4 class="package-name mb-20">Privacy Policy</h4>
-            <ul class="package-details">
-              <li>Your data is protected with end-to-end encryption.</li>
-              <li>We never sell your personal information.</li>
-              <li>All user data is stored securely.</li>
-              <li>Consent is required for data collection.</li>
-            </ul>
-          </div>
+
+        <div class="wow fadeInUp" data-wow-delay=".4s">
+          <h4>Introduction</h4>
+          <p>Amanat is designed to help users post, search, and manage listings for lost or found items. We are committed to protecting your privacy and ensuring that any personal information you provide is handled securely. This policy explains what information we collect, how it is used, and your choices regarding your data.</p>
+
+          <h4>Information Collection and Use</h4>
+          <p>We may collect information such as your name, contact details, and item descriptions when you create or respond to listings. This information is stored securely and used solely to facilitate communication between users. We do not sell or share your personal data with third parties except as required by law or to help connect users.</p>
+
+          <h4>Permissions Required</h4>
+          <ul>
+            <li><strong>Location access:</strong> Enables location tagging for better search relevance.</li>
+            <li><strong>Storage access (optional):</strong> Allows image uploads of lost/found items.</li>
+            <li><strong>Camera access (optional):</strong> Permits direct photo capture for listings.</li>
+          </ul>
+
+          <h4>Monetization</h4>
+          <p>The app uses Google AdMob to display ads, which may collect user data for personalized/non-personalized advertising. Please refer to <a href="https://policies.google.com/privacy">AdMob's privacy policy</a>.</p>
+
+          <h4>Third-Party Services</h4>
+          <p>While we protect your data, third-party services like AdMob may collect device identifiers for analytics and ads. Please refer to their individual policies.</p>
+
+          <h4>Children's Privacy</h4>
+          <p>This app is not intended for users under 13. We do not knowingly collect data from children under this age.</p>
+
+          <h4>Changes to This Privacy Policy</h4>
+          <p>We may update this policy. Changes will be posted here, with the effective date updated accordingly.</p>
+
+          <h4>Contact Us</h4>
+          <p>Email: <a href="mailto:info@lancers.dev">info@lancers.dev</a></p>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-6">
-          <div class="single-price text-center active wow fadeInUp" data-wow-delay=".5s">
-            <div class="price-icon icon-style mx-auto gradient-2">
-              <i class="lni lni-shield"></i>
-            </div>
-            <h4 class="package-name mb-20">User Guidelines</h4>
-            <ul class="package-details">
-              <li>No spamming or fraudulent listings.</li>
-              <li>Respect others' data and content.</li>
-              <li>Report inappropriate behavior promptly.</li>
-              <li>Misuse may lead to account suspension.</li>
-            </ul>
-          </div>
+
+        <hr class="my-5" />
+
+        <div class="section-title text-center">
+          <h2 class="mb-30 wow fadeInUp" data-wow-delay=".2s">Terms of Use for Amanat</h2>
+          <p class="mb-10 wow fadeInUp" data-wow-delay=".3s"><strong>Effective Date:</strong> 02/21/2025</p>
         </div>
-        <div class="col-xl-4 col-lg-4 col-md-6">
-          <div class="single-price text-center wow fadeInUp" data-wow-delay=".7s">
-            <div class="price-icon icon-style mx-auto gradient-3">
-              <i class="lni lni-clipboard"></i>
-            </div>
-            <h4 class="package-name mb-20">Terms of Use</h4>
-            <ul class="package-details">
-              <li>Use of the platform implies agreement with terms.</li>
-              <li>Content must be lawful and truthful.</li>
-              <li>We reserve the right to modify terms anytime.</li>
-              <li>Violations may result in legal actions.</li>
-            </ul>
-          </div>
+
+        <div class="wow fadeInUp" data-wow-delay=".4s">
+          <h4>Acceptance of Terms</h4>
+          <p>By accessing or using the app, you agree to be bound by these Terms of Use and our Privacy Policy. If you do not agree, do not use the app.</p>
+
+          <h4>Description of Service</h4>
+          <p>The app connects people who have lost items with those who’ve found them. You can post, search, manage listings, and communicate directly.</p>
+
+          <h4>User Responsibilities</h4>
+          <p>You must provide accurate info and keep your account secure. Misuse or illegal behavior can lead to suspension or termination.</p>
+
+          <h4>Content and Listings</h4>
+          <p>You are solely responsible for the content you post. We do not guarantee accuracy and are not liable for issues arising from user content.</p>
+
+          <h4>Intellectual Property</h4>
+          <p>All app content, design, and branding are the property of Amanat or its licensors. Usage is limited to personal, non-commercial purposes.</p>
+
+          <h4>Disclaimers and Limitation of Liability</h4>
+          <p>The app is provided "as is" without warranty. We are not liable for any damages resulting from use of the app.</p>
+
+          <h4>Changes to the Terms</h4>
+          <p>We may revise these terms anytime. Continued use after changes means you accept them.</p>
+
+          <h4>Governing Law</h4>
+          <p>These terms are governed by applicable laws in our operating jurisdiction.</p>
+
+          <h4>Contact Information</h4>
+          <p>Email: <a href="mailto:info@lancers.dev">info@lancers.dev</a></p>
         </div>
+
+        <!-- ✅ Download PDF Button -->
+        <button class="btn-pdf" onclick="downloadPDF()">Download PDF</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ✅ Optional: Bootstrap JS if needed -->
-  <script src="js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap Bundle -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<!-- ✅ PDF Generation Script -->
+<script>
+  function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF('p', 'pt', 'a4');
+    const content = document.getElementById("policy-content").innerText;
+    const margin = 40;
+    const maxLineWidth = 500;
+    const lines = doc.splitTextToSize(content, maxLineWidth);
+    doc.text(lines, margin, margin);
+    doc.save("Amanat-Policy.pdf");
+  }
+</script>
+
 </body>
 </html>
